@@ -1,0 +1,8 @@
+{
+  "name": "Password Reset App",
+  "short_name": "ResetApp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "A password reset application"
+}
