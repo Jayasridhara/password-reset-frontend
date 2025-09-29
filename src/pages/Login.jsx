@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import authServices from "../services/authServices";
 
 const Login = () => {
@@ -29,11 +29,10 @@ const Login = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-bold">
-                Login
-            </h1>
-            <form className="mt-2 w-full max-w-md p-4 bg-white rounded shadow" onSubmit={handleLogin}>
+        <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '70vh' }}>
+            <div className="card p-4 shadow-sm w-100" style={{ maxWidth: '400px' }}>
+                <h2 className="mb-4 text-center">Login</h2>
+                <form onSubmit={handleLogin}>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                         Email
@@ -52,6 +51,9 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
+                 <div className="mb-6">
+                         <Link to="/forgot-password">Forgot Password</Link>
+                 </div>
                 <div className="flex items-center justify-between">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                             Login
@@ -59,6 +61,7 @@ const Login = () => {
                 </div>
             </form>
         </div>
+    </div>
     )
 }
 

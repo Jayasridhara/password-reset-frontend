@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
-const API_URL = "https://password-reset-be-1-j7fe.onrender.com";
+const API_URL = "https://password-reset-be-1-0agf.onrender.com";
 
 const ResetPassword = () => {
     const { token } = useParams();

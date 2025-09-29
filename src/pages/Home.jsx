@@ -3,7 +3,7 @@
 
   const Home = () => {
     return (
-         <div className="flex flex-col items-center justify-center min-h-screen  ">
+         <div className="flex flex-col items-center justify-center min-h-50  ">
            
                 <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
                     Password Management Made Easy
@@ -12,10 +12,10 @@
                 Log in to your existing account or create a new one to securely manage your access.
             </p>
             <div className="flex space-x-4">
-                <Link to="/register" className="bg-blue-500 hover:bg-blue-700 text-blue font-bold py-2 px-4 rounded">
+                <Link to="/register" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Register
                 </Link>
-                <Link to="/login" className="bg-blue-500 hover:bg-blue-700 text-blue font-bold py-2 px-4 rounded">
+                <Link to="/login" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Login
                 </Link>
             </div>

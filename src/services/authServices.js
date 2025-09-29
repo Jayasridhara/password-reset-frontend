@@ -5,29 +5,36 @@ const authServices = {
     register: async (userData) => {
         try {
             const response = await instance.post("/auth/register", userData,{
-    headers: { "Content-Type": "application/json" },
-    withCredentials: true,
-  });
+            headers: { "Content-Type": "application/json" },
+            withCredentials: true,
+        });
             return response.data;
         } catch (error) {
-            return { message: error.message, status: error.response?.status }
+           throw {
+            message: error.response?.data?.message || "Registration failed",
+            status: error.response?.status || 500,
+            };
         }
     },
 
     login: async (credentials) => {
         try {
-            const response = await protectedInstance.post("/auth/login", credentials);
+            console.log("response",credentials);
+            const response = await protectedInstance.post("/auth/login",credentials);
             return response.data;
         } catch (error) {
-            return { message: error.message, status: error.response?.status }
-        }
+            throw {
+            message: error.response?.data?.message || "Login failed",
+            status: error.response?.status || 500,
+            };
+  }
     },  
 
     me: async () => {
         try {
             const response = await protectedInstance.get("/auth/me");
-            console.log(response);
-            return response.data;
+            console.log("authservice",response)
+            return response;
         } catch (error) {
             console.log("hi;",error)
             return {
