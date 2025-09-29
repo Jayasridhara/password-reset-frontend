@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import authServices from "../services/authServices";
 import { toast } from "react-toastify";
 
@@ -62,10 +62,11 @@ const Register = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col items-center justify-center">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                         Register
                     </button>
+                    <span className="mt-4">Already have an account?<Link to="/login">Login</Link></span>
                 </div>
             </form>
 

@@ -54,10 +54,11 @@ const Login = () => {
                  <div className="mb-6">
                          <Link to="/forgot-password">Forgot Password</Link>
                  </div>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col items-center justify-center">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                             Login
                     </button>
+                   <span className="mt-4">Don't have an account? <Link to="/register">Register</Link></span>
                 </div>
             </form>
         </div>
