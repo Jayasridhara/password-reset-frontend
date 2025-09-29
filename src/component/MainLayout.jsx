@@ -4,8 +4,8 @@ import { Link, Outlet } from "react-router";
 const MainLayout = () => {
     return (
         <div className="App">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-[#0B5ED7] flex justify-center text-center">
+                <div className="container-fluid ">
                     <Link className="navbar-brand" to="/">Password Reset App</Link>
                 </div>
             </nav>
