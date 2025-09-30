@@ -12,7 +12,7 @@ const Logout = () => {
         authServices.logout()
             .then(() => {
                 setTimeout(() => {
-                    toast.success("Logged out successfully!", {
+                    toast.success(response.message||"Logged out successfully!", {
                         position: "bottom-right"
                     });
                     navigate("/login");
